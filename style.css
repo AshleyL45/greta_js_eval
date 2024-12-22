@@ -1,0 +1,184 @@
+/*Polices et variables*/
+@font-face {
+    font-family: PlusJakarta;
+    src: url(/assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+:root {
+    --grey-for-first-background: hsl(219, 12%, 42%);
+    --grey-for-second-background: #f9fafe;
+    --hover-blue: #07307d;
+    --message-background: #f6fafd;
+    --notifications-marker : hsl(1, 90%, 64%);
+    --blue-for-notifications: #0a337b;
+}
+
+* {
+    color: var(--grey-for-first-background);
+    font-family: PlusJakarta;
+}
+
+/*Header*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 3%;
+}
+
+header > h3 {
+    width: calc(100% - 20%);
+    font-size: 1.5rem;
+    color: black;
+}
+
+header > p:hover, header > p:active {
+    color: var(--hover-blue);
+    cursor: pointer;
+}
+
+#notifications-number {
+    background-color: var(--blue-for-notifications);
+    color: white;
+    padding: 3px 15px;
+    border-radius: 5px;
+}
+
+/*Section Notifications*/
+body {
+    padding: 10% 20%;
+    background-color: var(--grey-for-second-background);
+}
+
+main{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2% 1%;
+    border-radius: 10px;
+}
+
+.background{
+    background-color: white;
+    padding: 4% 1%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+
+}
+
+section {
+    display: flex;
+    justify-content: flex-start;
+    margin: 2% 3%;
+    padding: 1% 3%;
+}
+
+.unread-notifications {
+    background-color: hsl(211, 68%, 94%);
+    border-radius: 5px;
+    border: calc(100%);
+}
+
+.notifications-text {
+    margin-left: 1%;
+}
+
+.notifications-title{
+    width: 35rem;
+}
+
+.username {
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.username:hover, .username:active{
+    color: var(--hover-blue);
+    cursor: pointer;
+}
+
+.post-name {
+    font-weight: 800;
+}
+
+.post-name:hover {
+    color: var(--hover-blue);
+    cursor: pointer;
+}
+
+img {
+    height: 30%;
+}
+
+.chess-image {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.message {
+    border: 1px solid rgba(128, 128, 128, 0.61);
+    border-radius: 5px;
+    width: 90%;
+    height: auto;
+    padding: 2%;
+    margin: 2% 3%;
+}
+
+.message:hover, .message:active{
+    background-color: var(--message-background);
+    border: none;
+    cursor: pointer;
+}
+
+.chess-club{
+    font-weight: 800;
+}
+
+.chess-club:hover{
+    color: var(--hover-blue);
+    cursor: pointer;
+}
+
+/*Point rouge*/
+.unread-marker {
+    background-color: var(--notifications-marker);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 1%;
+}
+
+/*Responsive Smartphone*/
+@media only screen and (max-width :480px) {
+    body{
+        padding: 0;
+        margin: 0;
+    }
+
+    section{
+        align-items: flex-start;
+        margin: 5% 3%;
+        padding: 1% 3%; 
+    }
+
+    .notifications-text {
+        margin-left: 3%;
+    }
+
+    .notifications-title{
+        max-width: 13rem;
+    }
+
+    img{
+        width: 15%;
+        margin-top: 5%;
+    }
+}
+
+/*Responsive Tablettes*/
+@media only screen and (max-width :1400px) {
+    .notifications-title{
+        width: 80%;
+    }
+}
